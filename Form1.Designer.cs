@@ -59,13 +59,14 @@
             this.txtPesquisa = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.dtgContatos = new System.Windows.Forms.DataGridView();
-            this.tableTableAdapter = new AgendadeContatos.AgendaDeContatosDataSetTableAdapters.TableTableAdapter();
-            this.tableAdapterManager = new AgendadeContatos.AgendaDeContatosDataSetTableAdapters.TableAdapterManager();
             this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.NOME = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TELEFONE = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ANIVERSARIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tableTableAdapter = new AgendadeContatos.AgendaDeContatosDataSetTableAdapters.TableTableAdapter();
+            this.tableAdapterManager = new AgendadeContatos.AgendaDeContatosDataSetTableAdapters.TableAdapterManager();
+            this.label3 = new System.Windows.Forms.Label();
             iD_CONTATOLabel = new System.Windows.Forms.Label();
             nOMELabel = new System.Windows.Forms.Label();
             tELEFONELabel = new System.Windows.Forms.Label();
@@ -147,7 +148,7 @@
             this.tableBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.tableBindingNavigator.Name = "tableBindingNavigator";
             this.tableBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.tableBindingNavigator.Size = new System.Drawing.Size(447, 25);
+            this.tableBindingNavigator.Size = new System.Drawing.Size(455, 25);
             this.tableBindingNavigator.TabIndex = 0;
             this.tableBindingNavigator.Text = "bindingNavigator1";
             // 
@@ -213,6 +214,7 @@
             // 
             this.bindingNavigatorPositionItem.AccessibleName = "Posição";
             this.bindingNavigatorPositionItem.AutoSize = false;
+            this.bindingNavigatorPositionItem.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
             this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
             this.bindingNavigatorPositionItem.Text = "0";
@@ -309,9 +311,9 @@
             this.btnPesquisar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPesquisar.Image = global::AgendadeContatos.Properties.Resources.img_pesquisar;
             this.btnPesquisar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPesquisar.Location = new System.Drawing.Point(324, 224);
+            this.btnPesquisar.Location = new System.Drawing.Point(333, 219);
             this.btnPesquisar.Name = "btnPesquisar";
-            this.btnPesquisar.Size = new System.Drawing.Size(149, 31);
+            this.btnPesquisar.Size = new System.Drawing.Size(143, 41);
             this.btnPesquisar.TabIndex = 11;
             this.btnPesquisar.Text = "Pesquisar";
             this.btnPesquisar.UseVisualStyleBackColor = true;
@@ -338,7 +340,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(34, 257);
+            this.label2.Location = new System.Drawing.Point(31, 263);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(312, 13);
             this.label2.TabIndex = 14;
@@ -356,19 +358,9 @@
             this.dtgContatos.Location = new System.Drawing.Point(17, 282);
             this.dtgContatos.Name = "dtgContatos";
             this.dtgContatos.RowHeadersVisible = false;
-            this.dtgContatos.Size = new System.Drawing.Size(418, 150);
+            this.dtgContatos.Size = new System.Drawing.Size(418, 164);
             this.dtgContatos.TabIndex = 15;
             this.dtgContatos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // tableTableAdapter
-            // 
-            this.tableTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.TableTableAdapter = this.tableTableAdapter;
-            this.tableAdapterManager.UpdateOrder = AgendadeContatos.AgendaDeContatosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
             // CODIGO
             // 
@@ -404,11 +396,31 @@
             this.FAMILIA.Name = "FAMILIA";
             this.FAMILIA.Width = 70;
             // 
+            // tableTableAdapter
+            // 
+            this.tableTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.TableTableAdapter = this.tableTableAdapter;
+            this.tableAdapterManager.UpdateOrder = AgendadeContatos.AgendaDeContatosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(316, 25);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(76, 13);
+            this.label3.TabIndex = 16;
+            this.label3.Text = "Minha Agenda";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 434);
+            this.ClientSize = new System.Drawing.Size(455, 458);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.dtgContatos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPesquisa);
@@ -473,6 +485,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ANIVERSARIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn FAMILIA;
+        private System.Windows.Forms.Label label3;
     }
 }
 
