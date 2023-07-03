@@ -66,7 +66,6 @@
             this.FAMILIA = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tableTableAdapter = new AgendadeContatos.AgendaDeContatosDataSetTableAdapters.TableTableAdapter();
             this.tableAdapterManager = new AgendadeContatos.AgendaDeContatosDataSetTableAdapters.TableAdapterManager();
-            this.label3 = new System.Windows.Forms.Label();
             iD_CONTATOLabel = new System.Windows.Forms.Label();
             nOMELabel = new System.Windows.Forms.Label();
             tELEFONELabel = new System.Windows.Forms.Label();
@@ -406,21 +405,11 @@
             this.tableAdapterManager.TableTableAdapter = this.tableTableAdapter;
             this.tableAdapterManager.UpdateOrder = AgendadeContatos.AgendaDeContatosDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(316, 25);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(76, 13);
-            this.label3.TabIndex = 16;
-            this.label3.Text = "Minha Agenda";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(455, 458);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.dtgContatos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPesquisa);
@@ -485,7 +474,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn TELEFONE;
         private System.Windows.Forms.DataGridViewTextBoxColumn ANIVERSARIO;
         private System.Windows.Forms.DataGridViewTextBoxColumn FAMILIA;
-        private System.Windows.Forms.Label label3;
     }
 }
 
